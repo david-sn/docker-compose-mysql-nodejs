@@ -1,0 +1,387 @@
+{
+	"info": {
+		"_postman_id": "fdebc776-59d9-430f-a5a6-49785b43173c",
+		"name": "Car-Customer",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Car Operation",
+			"item": [
+				{
+					"name": "createCar",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brandName\": \"brandName\",\n    \"yearMade\": 2017,\n    \"cost\": 55,\n    \"customerId\": 300\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/car/createCar",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"createCar"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCar",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"brandName\": \"brandName\",\n    \"yearMade\": 2017,\n    \"cost\": 55,\n    \"customerId\": 3\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/car/updateCar?id=4",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"updateCar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "4"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCars",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/car/findAllCars",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"findAllCars"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOneByIdCar",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/car/findOneByIdCar?id=2",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"findOneByIdCar"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "2"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findCustomerCars",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:3000/car/findCustomerCars?id=3",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"car",
+								"findCustomerCars"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		},
+		{
+			"name": "Customer Operation",
+			"item": [
+				{
+					"name": "createCustomer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"firstName\": \"firstName\",\n        \"lastName\": \"lastName\",\n        \"email\": \"email\",\n        \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customer/createCustomer",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"createCustomer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCustomer",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"firstName\": \"firstName\",\n        \"lastName\": \"lastName\",\n        \"email\": \"email\",\n        \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customer/updateCustomer?id=5",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"updateCustomer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "5"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCustomer",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"firstName\": \"req.body.firstName\",\n        \"lastName\": \"req.body.lastName\",\n        \"email\": \"req.body.email\",\n        \"password\": \"req.body.password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customer/deleteCustomer?id=1",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"deleteCustomer"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllCustomers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"firstName\": \"req.body.firstName\",\n        \"lastName\": \"req.body.lastName\",\n        \"email\": \"req.body.email\",\n        \"password\": \"req.body.password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customer/findAllCustomers",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"findAllCustomers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findOneByCustomerId",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"name": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t \"firstName\": \"req.body.firstName\",\n        \"lastName\": \"req.body.lastName\",\n        \"email\": \"req.body.email\",\n        \"password\": \"req.body.password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/customer/findOneByCustomerId?id=35",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"customer",
+								"findOneByCustomerId"
+							],
+							"query": [
+								{
+									"key": "id",
+									"value": "35"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

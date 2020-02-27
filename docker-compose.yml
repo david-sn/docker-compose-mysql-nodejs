@@ -1,0 +1,15 @@
+version: '2'
+services:
+  security:
+    build: ./web-service
+    ports:
+     - "3000:3000"
+    depends_on:
+     - db
+    environment:
+      - DATABASE_HOST=db
+      - MYSQL_ROOT_PASSWORD=root
+      - MYSQL_PASSWORD=root
+      - MYSQL_DATABASE=cypress
+  db:
+    build: ./db-service

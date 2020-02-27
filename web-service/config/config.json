@@ -1,0 +1,20 @@
+{
+  "development": {
+    "username": "root",
+    "password": "root",
+    "database": "cypress",
+    "host": "db",
+    "port": 3306,
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
+  "production": {
+    "username": "root",
+    "password": "root",
+    "database": "cypress",
+    "host": "db",
+    "port": 3306,
+    "dialect": "mysql",
+    "operatorsAliases": false
+  }
+}
