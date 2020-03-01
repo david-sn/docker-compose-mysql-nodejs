@@ -12,7 +12,7 @@ module.exports = (sequelize, DataTypes) => {
           //immplement custom validate for upper case 
           console.log('startwithUpper Function ', bodyVal);
           // 
-          throw new Error('Custom Error')
+          // throw new Error('Custom Error');
         }
       }
     },
