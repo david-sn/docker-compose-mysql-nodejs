@@ -1,0 +1,6 @@
+web-service/node_modules
+./web-service/node_modules
+web-service/node_modules/
+
+/web-service/node_modules/
+./web-service/node_modules/
