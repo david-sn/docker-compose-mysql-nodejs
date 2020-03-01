@@ -1,16 +1,36 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   const Cars = sequelize.define('Cars', {
-    brandName: DataTypes.STRING,
+    brandName: {
+      type: DataTypes.STRING,
+      validate: {
+        len: {
+          args: [3, 5],
+          msg: "min is 3 char"
+        },
+        startwithUpper: function (bodyVal) {
+          //immplement custom validate for upper case 
+          console.log('startwithUpper Function ', bodyVal);
+          // 
+          throw new Error('Custom Error')
+        }
+      }
+    },
     yearMade: DataTypes.INTEGER,
     cost: {
       type: DataTypes.DECIMAL,
       defaultValue: 0.0,
       unique: false,
-      allowNull: false
+      allowNull: false,
+      validate: {
+        len: {
+          args: [3, 5],
+          msg: "min is 3 char"
+        }
+      }
     }
   }, {
-    timestamps: false,
+    // timestamps: false,
     freezTableName: false//sequlize plorilse table name by adding s at end of model name
 
   });
