@@ -31,8 +31,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }, {
     // timestamps: false,
-    freezTableName: false//sequlize plorilse table name by adding s at end of model name
-
+    freezTableName: false,//sequlize plorilse table name by adding s at end of model name
+    hooks: {
+      beforeValidate: function () { console.log('beforeValidate'); },
+      afterValidate: function () { console.log('afterValidate');/* can here bcrypt password for user*/ },
+      beforeCreate: function (data) { console.log('beforeCreate------- ',data); },
+      afterCreate: function (data) { console.log('afterCreate**** '); }
+    }
   });
   Cars.associate = function (models) {
     // associations can be defined here

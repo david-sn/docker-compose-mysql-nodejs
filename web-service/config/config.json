@@ -3,7 +3,7 @@
     "username": "root",
     "password": "root",
     "database": "cypress",
-    "host": "localhost",
+    "host": "db",
     "port": 3306,
     "dialect": "mysql",
     "operatorsAliases": false
@@ -12,7 +12,7 @@
     "username": "root",
     "password": "root",
     "database": "cypress",
-    "host": "localhost",
+    "host": "db",
     "port": 3306,
     "dialect": "mysql",
     "operatorsAliases": false
