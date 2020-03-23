@@ -83,3 +83,16 @@ module.exports.findCustomerCarsByCustomerId = function (req, res) {
         res.status(200).json({ status: "OK", result: carDB })
     });
 }
+
+module.exports.test = async function (req, res) {
+    const { QueryTypes } = require('sequelize');
+
+
+    const rs = await Models.sequelize.query('SELECT * FROM Cars', {
+        model: Models.Customers,
+        mapToModel: true // pass true here if you have any mapped fields
+    });
+    // console.log(Models.);
+
+    res.status(200).json({ status: "OK", result: rs })
+}

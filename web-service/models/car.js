@@ -20,11 +20,12 @@ module.exports = (sequelize, DataTypes) => {
     cost: {
       type: DataTypes.DECIMAL,
       defaultValue: 0.0,
+      dialectOptions: { decimalNumbers: true },
       unique: false,
       allowNull: false,
       validate: {
         len: {
-          args: [3, 5],
+          args: [1, 5],
           msg: "min is 3 char"
         }
       }
@@ -35,7 +36,7 @@ module.exports = (sequelize, DataTypes) => {
     hooks: {
       beforeValidate: function () { console.log('beforeValidate'); },
       afterValidate: function () { console.log('afterValidate');/* can here bcrypt password for user*/ },
-      beforeCreate: function (data) { console.log('beforeCreate------- ',data); },
+      beforeCreate: function (data) { console.log('beforeCreate------- ', data); },
       afterCreate: function (data) { console.log('afterCreate**** '); }
     }
   });
@@ -45,6 +46,7 @@ module.exports = (sequelize, DataTypes) => {
       onDelete: "CASCADE",
       foreignKey: { allowNull: false }
     });
+   
   };
   return Cars;
 };
